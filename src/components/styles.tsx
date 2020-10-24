@@ -18,6 +18,7 @@ export const AppHeader = styled.div`
 export const AppWrapper = styled.div`
   margin-bottom: 20px;
   text-align: center;
+  background-color: #f2f5f5;
 `;
 
 export const AppContent = styled.div`

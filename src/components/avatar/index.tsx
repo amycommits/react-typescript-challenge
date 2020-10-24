@@ -6,6 +6,7 @@ const ImgWrapper = styled.div<{ width: string; height: string }>`
     width: ${props => props.width};
     height: ${props => props.height};
     object-fit: cover;
+    flex: 1
   }
 `;
 
