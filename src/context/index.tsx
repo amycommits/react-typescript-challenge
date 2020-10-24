@@ -4,6 +4,8 @@ import * as config from "../constants/config";
 type IsLocating = boolean;
 type Regions = any;
 type Location = any;
+type results = any;
+type data = any;
 type LatLng = {
   latitude: number;
   longitude: number;
@@ -48,15 +50,12 @@ export function useGlobal(
       }
     };
     setIsLocating(true);
-    fetch(url, options)
-      .then(res => {
-        res.json();
-      })
-      .then((json: any) => {
-        setLocation(json.data.location);
-        setRegions(json.data.regions);
-      })
-      .catch(() => setError("Oops something went wrong"));
+    const fetchedResults = await fetch(url, options)
+    const json = await fetchedResults.json();
+    console.log(json.data)
+    setLocation(json.data.location);
+    setRegions(json.data.regions);
+
     setIsLocating(false);
   }
 
