@@ -1,13 +1,11 @@
 import React from "react";
-import { Link } from "@reach/router";
 import Avatar from "../avatar";
-import StarRating from './star_rating'
+import StarRating from '../listing_card/star_rating'
 import get from "lodash.get";
 import { CardWrapper, CardInfoWrapper, CardInfo, BusinessName, RatingSection, RatingNumber} from "../styles/listings"
 
 // let InfoPage = (props: RouteComponentProps) => <BusinessInfo />
-const ListingCard = ({ listing }: { listing: any }) => (
-  <Link to={`info/${listing.wmid}`}>
+const Details = ({ listing }: { listing: any }) => (
   <CardWrapper data-cy="listing-card">
     <Avatar img={`${get(listing, "avatar_image.original_url")}`} />
     <CardInfoWrapper data-cy="listing-info-wrapper">
@@ -19,7 +17,6 @@ const ListingCard = ({ listing }: { listing: any }) => (
       </RatingSection>
     </CardInfoWrapper>   
   </CardWrapper>
-  </Link>
 );
 
-export default ListingCard;
+export default Details;
