@@ -1,7 +1,7 @@
 import React from "react";
 import get from "lodash.get";
 import logo from "../assets/logo.png";
-import ListingCards from "./listing_cards";
+import ListingCards from "../components/listing_cards";
 import Locate from "../icons/locate";
 import MapPin from "../icons/map-pin";
 import {
@@ -14,7 +14,7 @@ import {
   LocationSection,
   TextContent,
   LocateButton
-} from "./styles";
+} from "../components/styles";
 import { GlobalContext, EMPTY } from "../context";
 
 type RetailerType = "delivery" | "dispensary" | "doctor";
