@@ -11,7 +11,7 @@ const ListingCard = ({ listing }: { listing: any }) => (
       <CardInfo> {listing.city} </CardInfo>
       <BusinessName> {listing.name} </BusinessName>
       <RatingSection> 
-        <StarRating rating={listing.rating} />
+        <StarRating rating={listing.rating} listingId={listing.id} />
         <RatingNumber>{listing.rating.toPrecision(2)}</RatingNumber>
       </RatingSection>
     </CardInfoWrapper>
